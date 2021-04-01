@@ -10,8 +10,9 @@ your own risk. The authors are not responsible or liable for any damages incurre
 # Build Instructions
 
 ### 1. Get Source codes from the repository 
-   
+   ```
    $ git clone https://github.com/suuman/pepper_navigation.git
+   ```
 	
 ### 2. Build executables required for mapping.
  
