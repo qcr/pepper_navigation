@@ -15,28 +15,37 @@ your own risk. The authors are not responsible or liable for any damages incurre
    ```
 	
 ### 2. Build executables required for mapping.
- 
+ ```
   $ cd pepper_navigation/mapping  
   $ ./build_linematching.sh
+  ```
 
   The above command will build executables detectinesED and matchlines to ./linematching folder and is equivalent to the following commands
-	
+```	
    $ cd linematching/Linematching_iso && mkdir build $$ cd build  
    $ cmake .. && make -j8  
+   ```
 	
 ### 3. Build Navigation code
-
+```
    $ cd pepper_navigation 
    $ ./compile.sh
+   ```
 
    The above command will build executables in the build directory and is equivalent to the following commands  
+   ```
    $ mkdir build $$ cd build  
    $ cmake .. && make -j8
+   ```
 	
-   If the CMake options and Path has to changed from default  
+   If the CMake options and Path has to changed from default 
+   ```
 	$ ccmake .. or cmake-gui ..  
-	Configure and Generate Makefile.  
+	```
+    Configure and Generate Makefile.  
+	```
     $ make -j8
+    ```
   
   Following executables will be built  
   a) peppernav_gui => Toplogical navigation of the Pepper robot with the code running at external PC.  
