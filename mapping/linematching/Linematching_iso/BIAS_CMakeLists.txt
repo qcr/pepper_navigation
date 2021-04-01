@@ -1,0 +1,96 @@
+## Header and Source Files Required for Line Segments Detection and Matching
+# BIAS libary (http://www.mip.informatik.uni-kiel.de/tiki-index.php?page=BIAS) is no longer available for download
+# Here are the required code taken from that library
+
+set(BIAS_SOURCES  
+
+    edlbd/BIAS/Base/Common/CompareFloatingPoint.cpp
+    edlbd/BIAS/Base/Debug/Debug.cpp
+    edlbd/BIAS/Base/Debug/biasexit.cpp
+    edlbd/BIAS/Base/Debug/biasabort.cpp
+    edlbd/BIAS/Base/Math/Vector3.cpp
+    edlbd/BIAS/Base/Math/Vector2.cpp
+    edlbd/BIAS/Base/Math/Matrix4x4.cpp
+    edlbd/BIAS/Base/Math/Matrix3x4.cpp
+    edlbd/BIAS/Base/Math/Matrix3x3.cpp
+    edlbd/BIAS/Base/Math/Matrix2x2.cpp
+    edlbd/BIAS/Base/Math/Matrix.cpp
+    edlbd/BIAS/Base/Math/Vector4.cpp
+    edlbd/BIAS/Base/Math/Vector.cpp
+    edlbd/BIAS/Base/Image/ROI.cpp
+    edlbd/BIAS/Base/Image/MetaData.cpp
+    edlbd/BIAS/Base/Image/ImageConvert.cpp
+    edlbd/BIAS/Base/Image/ImageBase.cpp
+    edlbd/BIAS/Base/Image/Image.cpp
+    edlbd/BIAS/Filter/FilterNToN.cpp
+    edlbd/BIAS/Filter/FilterNTo2N.cpp
+    edlbd/BIAS/Filter/FilterMask.cpp
+    edlbd/BIAS/Filter/FilterBase.cpp
+    edlbd/BIAS/Filter/Convolution.cpp
+    edlbd/BIAS/Filter/Mean.cpp
+    edlbd/BIAS/Filter/Rescale.cpp
+    edlbd/BIAS/Filter/Gauss.cpp
+    edlbd/BIAS/Filter/FilterNToN.cpp
+    edlbd/BIAS/Filter/Binomial.cpp
+    edlbd/BIAS/Base/Debug/LogFacility.cpp
+    edlbd/BIAS/Filter/GaussThreshold.cpp
+)
+
+
+set(BIAS_HEADERS 
+    edlbd/BIAS/bias_config.h
+    edlbd/BIAS/BIAS_DeclSpec.hh
+    edlbd/BIAS/BIAS_Definitions.hh
+    edlbd/BIAS/Base/Common/CompareFloatingPoint.hh
+    edlbd/BIAS/Base/Debug/biasexit.hh
+    edlbd/BIAS/Base/Debug/Exception.hh
+    edlbd/BIAS/Base/Debug/Error.hh
+    edlbd/BIAS/Base/Debug/biasabort.hh
+    edlbd/BIAS/Base/Debug/Debug.hh
+    edlbd/BIAS/Base/Math/tnt/tntmath.h
+    edlbd/BIAS/Base/Math/tnt/version.h
+    edlbd/BIAS/Base/Math/tnt/fmat.h
+    edlbd/BIAS/Base/Math/tnt/cmat.h
+    edlbd/BIAS/Base/Math/tnt/tnt.h
+    edlbd/BIAS/Base/Math/tnt/region2d.h
+    edlbd/BIAS/Base/Math/tnt/vec.h
+    edlbd/BIAS/Base/Math/Utils.hh
+    edlbd/BIAS/Base/Math/Polynom.hh
+    edlbd/BIAS/Base/Math/Matrix4x4.hh
+    edlbd/BIAS/Base/Math/Vector3.hh
+    edlbd/BIAS/Base/Math/Vector4.hh
+    edlbd/BIAS/Base/Math/Matrix.hh
+    edlbd/BIAS/Base/Math/Operators.hh
+    edlbd/BIAS/Base/Math/Matrix3x4.hh
+    edlbd/BIAS/Base/Math/Vector2.hh
+    edlbd/BIAS/Base/Math/Matrix2x2.hh
+    edlbd/BIAS/Base/Math/Vector.hh
+    edlbd/BIAS/Base/Math/Matrix3x3.hh
+    edlbd/BIAS/Base/Math/Matrix3x2.hh
+    edlbd/BIAS/Base/Image/ImageInline.hh
+    edlbd/BIAS/Base/Image/ROI.hh
+    edlbd/BIAS/Base/Image/ImageConvert.hh
+    edlbd/BIAS/Base/Image/MetaData.hh
+    edlbd/BIAS/Base/Image/ImageBaseInline.hh
+    edlbd/BIAS/Base/Image/Image.hh
+    edlbd/BIAS/Base/Image/ImageBase.hh
+    edlbd/BIAS/Filter/FilterNTo2N.hh
+    edlbd/BIAS/Filter/FilterMask.hh
+    edlbd/BIAS/Filter/Convolution.hh
+    edlbd/BIAS/Filter/Binomial.hh
+    edlbd/BIAS/Filter/Rescale.hh
+    edlbd/BIAS/Filter/Gauss.hh
+    edlbd/BIAS/Filter/Mean.hh
+    edlbd/BIAS/Filter/FilterNToN.hh
+    edlbd/BIAS/Filter/FilterBase.hh
+    edlbd/BIAS/Base/Debug/DebugSimple.hh
+    edlbd/BIAS/Base/Debug/LogFacility.hh
+    edlbd/BIAS/Base/Image/ViffHeader.hh
+    edlbd/BIAS/Filter/GaussThreshold.hh
+    edlbd/BIAS/Filter/Filterinst.hh
+
+)
+
+include_directories(edlbd)
+include_directories(edlbd/BIAS)
+

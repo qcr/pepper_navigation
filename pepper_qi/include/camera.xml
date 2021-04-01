@@ -1,0 +1,335 @@
+<?xml version="1.0"?>
+<root>
+  <!--This file stores intrinsic camera parameters used
+   in the vpCameraParameters Class of ViSP available
+   at http://www.irisa.fr/lagadic/visp/visp.html .
+   It can be read with the parse method of
+   the vpXmlParserCamera class.-->
+
+<!-- ******************** ROMEO CAMERA PARAMETERS ******************** -->
+  <camera>
+    <!--Name of the camera-->
+    <name>CameraLeft</name>
+    <!--Size of the image on which camera calibration was performed-->
+    <image_width>640</image_width>
+    <image_height>480</image_height>
+    <!--Intrinsic camera parameters computed for each projection model-->
+    <model>
+      <!--Projection model type-->
+      <type>perspectiveProjWithoutDistortion</type>
+      <!--Pixel ratio-->
+      <px>695.5806213265</px>
+      <py>695.9860420187</py>
+      <!--Principal point-->
+      <u0>343.5511300709</u0>
+      <v0>255.6826279017</v0>
+    </model>
+    <model>
+      <!--Projection model type-->
+      <type>perspectiveProjWithDistortion</type>
+      <!--Pixel ratio-->
+      <px>696.3275148818</px>
+      <py>696.7607593456</py>
+      <!--Principal point-->
+      <u0>343.3594910906</u0>
+      <v0>255.7495978297</v0>
+      <!--Undistorted to distorted distortion parameter-->
+      <kud>0.0033595353</kud>
+      <!--Distorted to undistorted distortion parameter-->
+      <kdu>-0.0033776762</kdu>
+    </model>
+  </camera>
+  <camera>
+    <!--Name of the camera-->
+    <name>CameraLeft</name>
+    <!--Size of the image on which camera calibration was performed-->
+    <image_width>320</image_width>
+    <image_height>240</image_height>
+    <!--Intrinsic camera parameters computed for each projection model-->
+    <model>
+      <!--Projection model type-->
+      <type>perspectiveProjWithoutDistortion</type>
+      <!--Pixel ratio-->
+      <px>347.0862565027</px>
+      <py>347.2438562059</py>
+      <!--Principal point-->
+      <u0>171.3172715407</u0>
+      <v0>127.6318260191</v0>
+    </model>
+    <model>
+      <!--Projection model type-->
+      <type>perspectiveProjWithDistortion</type>
+      <!--Pixel ratio-->
+      <px>347.5711151499</px>
+      <py>347.7355546469</py>
+      <!--Principal point-->
+      <u0>171.2837376078</u0>
+      <v0>127.7144697917</v0>
+      <!--Undistorted to distorted distortion parameter-->
+      <kud>0.0035092420</kud>
+      <!--Distorted to undistorted distortion parameter-->
+      <kdu>-0.0035389979</kdu>
+    </model>
+  </camera>
+
+  <camera>
+    <!--Name of the camera-->
+    <name>CameraLeftEye</name>
+    <!--Size of the image on which camera calibration was performed-->
+    <image_width>320</image_width>
+    <image_height>240</image_height>
+    <!--Intrinsic camera parameters computed for each projection model-->
+    <model>
+      <!--Projection model type-->
+      <type>perspectiveProjWithoutDistortion</type>
+      <!--Pixel ratio-->
+      <px>342.6434668</px>
+      <py>342.7291278</py>
+      <!--Principal point-->
+      <u0>167.2662108</u0>
+      <v0>122.0678628</v0>
+    </model>
+    <model>
+      <!--Projection model type-->
+      <type>perspectiveProjWithDistortion</type>
+      <!--Pixel ratio-->
+      <px>344.4519005</px>
+      <py>344.5763388</py>
+      <!--Principal point-->
+      <u0>167.3284771</u0>
+      <v0>122.2567654</v0>
+      <!--Undistorted to distorted distortion parameter-->
+      <kud>0.01433910948</kud>
+      <!--Distorted to undistorted distortion parameter-->
+      <kdu>-0.1493318165</kdu>
+    </model>
+  </camera>
+
+  <camera>
+    <!--Name of the camera-->
+    <name>CameraLeftEye</name>
+    <!--Size of the image on which camera calibration was performed-->
+    <image_width>640</image_width>
+    <image_height>480</image_height>
+    <!--Intrinsic camera parameters computed for each projection model-->
+    <model>
+      <!--Projection model type-->
+      <type>perspectiveProjWithoutDistortion</type>
+      <!--Pixel ratio-->
+      <px>687.3751097514</px>
+      <py>687.3732974060</py>
+      <!--Principal point-->
+      <u0>334.7006111232</u0>
+      <v0>244.9753794549</v0>
+    </model>
+    <model>
+      <!--Projection model type-->
+      <type>perspectiveProjWithDistortion</type>
+      <!--Pixel ratio-->
+      <px>690.0497528052</px>
+      <py>690.1080857046</py>
+      <!--Principal point-->
+      <u0>335.1420042473</u0>
+      <v0>245.1904888466</v0>
+      <!--Undistorted to distorted distortion parameter-->
+      <kud>0.0107051514</kud>
+      <!--Distorted to undistorted distortion parameter-->
+      <kdu>-0.0106803706</kdu>
+    </model>
+  </camera>
+
+  <camera>
+    <!--Name of the camera-->
+    <name>CameraRight</name>
+    <!--Size of the image on which camera calibration was performed-->
+    <image_width>640</image_width>
+    <image_height>480</image_height>
+    <!--Intrinsic camera parameters computed for each projection model-->
+    <model>
+      <!--Projection model type-->
+      <type>perspectiveProjWithoutDistortion</type>
+      <!--Pixel ratio-->
+      <px>691.3824696101</px>
+      <py>691.8182622160</py>
+      <!--Principal point-->
+      <u0>327.9894178666</u0>
+      <v0>223.3474939019</v0>
+    </model>
+    <model>
+      <!--Projection model type-->
+      <type>perspectiveProjWithDistortion</type>
+      <!--Pixel ratio-->
+      <px>692.4554304230</px>
+      <py>692.9213868548</py>
+      <!--Principal point-->
+      <u0>327.5382649092</u0>
+      <v0>223.6140203012</v0>
+      <!--Undistorted to distorted distortion parameter-->
+      <kud>0.0045924832</kud>
+      <!--Distorted to undistorted distortion parameter-->
+      <kdu>-0.0046109035</kdu>
+    </model>
+  </camera>
+  <camera>
+    <!--Name of the camera-->
+    <name>CameraRight</name>
+    <!--Size of the image on which camera calibration was performed-->
+    <image_width>320</image_width>
+    <image_height>240</image_height>
+    <!--Intrinsic camera parameters computed for each projection model-->
+    <model>
+      <!--Projection model type-->
+      <type>perspectiveProjWithoutDistortion</type>
+      <!--Pixel ratio-->
+      <px>344.6361461418</px>
+      <py>344.6433433385</py>
+      <!--Principal point-->
+      <u0>163.8587040377</u0>
+      <v0>111.0865293139</v0>
+    </model>
+    <model>
+      <!--Projection model type-->
+      <type>perspectiveProjWithDistortion</type>
+      <!--Pixel ratio-->
+      <px>345.8178111550</px>
+      <py>345.8459499806</py>
+      <!--Principal point-->
+      <u0>163.4469257394</u0>
+      <v0>111.4156256517</v0>
+      <!--Undistorted to distorted distortion parameter-->
+      <kud>0.0083099207</kud>
+      <!--Distorted to undistorted distortion parameter-->
+      <kdu>-0.0083147638</kdu>
+    </model>
+  </camera>
+   <camera>
+    <!--Name of the camera-->
+    <name>CameraRightEye</name>
+    <!--Size of the image on which camera calibration was performed-->
+    <image_width>640</image_width>
+    <image_height>480</image_height>
+    <!--Intrinsic camera parameters computed for each projection model-->
+    <model>
+      <!--Projection model type-->
+      <type>perspectiveProjWithoutDistortion</type>
+      <!--Pixel ratio-->
+      <px>690.8971691775</px>
+      <py>690.9034165442</py>
+      <!--Principal point-->
+      <u0>318.3492483064</u0>
+      <v0>224.9990884893</v0>
+    </model>
+    <model>
+      <!--Projection model type-->
+      <type>perspectiveProjWithDistortion</type>
+      <!--Pixel ratio-->
+      <px>691.5941775549</px>
+      <py>691.6252224948</py>
+      <!--Principal point-->
+      <u0>318.3676648953</u0>
+      <v0>225.0707858002</v0>
+      <!--Undistorted to distorted distortion parameter-->
+      <kud>0.0027191514</kud>
+      <!--Distorted to undistorted distortion parameter-->
+      <kdu>-0.0027367254</kdu>
+    </model>
+  </camera>
+  <camera>
+    <!--Name of the camera-->
+    <name>CameraRightEye</name>
+    <!--Size of the image on which camera calibration was performed-->
+    <image_width>320</image_width>
+    <image_height>240</image_height>
+    <!--Intrinsic camera parameters computed for each projection model-->
+    <model>
+      <!--Projection model type-->
+      <type>perspectiveProjWithoutDistortion</type>
+      <!--Pixel ratio-->
+      <px>345.1428267175</px>
+      <py>345.1206548727</py>
+      <!--Principal point-->
+      <u0>159.0744697136</u0>
+      <v0>112.1455553832</v0>
+    </model>
+    <model>
+      <!--Projection model type-->
+      <type>perspectiveProjWithDistortion</type>
+      <!--Pixel ratio-->
+      <px>345.9785416974</px>
+      <py>345.9748170985</py>
+      <!--Principal point-->
+      <u0>159.0027488419</u0>
+      <v0>112.2190243836</v0>
+      <!--Undistorted to distorted distortion parameter-->
+      <kud>0.0065795509</kud>
+      <!--Distorted to undistorted distortion parameter-->
+      <kdu>-0.0066035652</kdu>
+    </model>
+  </camera>
+<!-- ******************** PEPPER CAMERA PARAMETERS ******************** -->
+  <camera>
+    <!--Name of the camera-->
+    <name>CameraTopPepper</name>
+    <!--Size of the image on which camera calibration was performed-->
+    <image_width>320</image_width>
+    <image_height>240</image_height>
+    <!--Intrinsic camera parameters computed for each projection model-->
+    <model>
+      <!--Projection model type-->
+      <type>perspectiveProjWithoutDistortion</type>
+      <!--Pixel ratio-->
+      <px>298.1338580414</px>
+      <py>298.7175694490</py>
+      <!--Principal point-->
+      <u0>159.1476351771</u0>
+      <v0>118.9052995583</v0>
+    </model>
+    <model>
+      <!--Projection model type-->
+      <type>perspectiveProjWithDistortion</type>
+      <!--Pixel ratio-->
+      <px>300.0232250495</px>
+      <py>300.9510204793</py>
+      <!--Principal point-->
+      <u0>159.2218697340</u0>
+      <v0>119.5548764302</v0>
+      <!--Undistorted to distorted distortion parameter-->
+      <kud>0.0275116017</kud>
+      <!--Distorted to undistorted distortion parameter-->
+      <kdu>-0.0273747837</kdu>
+    </model>
+  </camera>
+  <camera>
+    <!--Name of the camera-->
+    <name>CameraBottomPepper</name>
+    <!--Size of the image on which camera calibration was performed-->
+    <image_width>320</image_width>
+    <image_height>240</image_height>
+    <!--Intrinsic camera parameters computed for each projection model-->
+    <model>
+      <!--Projection model type-->
+      <type>perspectiveProjWithoutDistortion</type>
+      <!--Pixel ratio-->
+      <px>296.3437428191</px>
+      <py>296.6441607237</py>
+      <!--Principal point-->
+      <u0>158.2733787287</u0>
+      <v0>118.0622191474</v0>
+    </model>
+    <model>
+      <!--Projection model type-->
+      <type>perspectiveProjWithDistortion</type>
+      <!--Pixel ratio-->
+      <px>298.0538525268</px>
+      <py>298.3795400144</py>
+      <!--Principal point-->
+      <u0>159.1025801858</u0>
+      <v0>118.1337203441</v0>
+      <!--Undistorted to distorted distortion parameter-->
+      <kud>0.0208072256</kud>
+      <!--Distorted to undistorted distortion parameter-->
+      <kdu>-0.0206371588</kdu>
+    </model>
+  </camera>
+
+</root>

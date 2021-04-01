@@ -1,0 +1,73 @@
+CMAKE_MINIMUM_REQUIRED(VERSION 3.0)
+PROJECT(qgv)
+
+SET(CMAKE_MODULE_PATH ${CMAKE_CURRENT_SOURCE_DIR}/cmake/modules )
+find_package(Qt5 REQUIRED COMPONENTS Core Widgets)
+FIND_PACKAGE(Graphviz REQUIRED)
+set(CMAKE_INCLUDE_CURRENT_DIR ON)
+set(CMAKE_AUTOMOC ON)
+
+SET(qgvlib_CPP
+  private/QGVCore.cpp
+  private/QGVGraphPrivate.cpp
+  private/QGVEdgePrivate.cpp
+  private/QGVGvcPrivate.cpp
+  private/QGVNodePrivate.cpp
+  QGVEdge.cpp
+  QGVNode.cpp
+  QGVScene.cpp
+  QGVSubGraph.cpp
+)
+
+SET(TARGET_NAME "QGVCore")
+
+# include with QT_USE selected library parts
+#INCLUDE(${QT_USE_FILE})
+
+INCLUDE_DIRECTORIES(
+	${GRAPHVIZ_INCLUDE_DIR}
+	${CMAKE_CURRENT_SOURCE_DIR}
+        ${CMAKE_CURRENT_SOURCE_DIR}/private
+     
+)
+
+
+SET(QT_LIBRARIES
+	Qt5::Core
+	Qt5::Widgets
+)	
+
+ADD_LIBRARY(qgvcore SHARED
+  ${qgvlib_CPP}
+)
+
+
+
+TARGET_LINK_LIBRARIES(qgvcore
+  ${QT_LIBRARIES}
+  ${GRAPHVIZ_GVC_LIBRARY}
+  ${GRAPHVIZ_CGRAPH_LIBRARY}
+  ${GRAPHVIZ_CDT_LIBRARY}
+)
+
+
+SET(bin_DIR ${CMAKE_INSTALL_PREFIX}/bin)
+SET(LIB_INSTALL_DIR "${CMAKE_INSTALL_PREFIX}/lib/" CACHE STRING "Where to install the library files to")
+SET(EXECUTABLE_OUTPUT_PATH ${CMAKE_BINARY_DIR}/bin)
+SET(LIBRARY_OUTPUT_PATH ${CMAKE_BINARY_DIR}/lib)
+SET(include_DIR ${CMAKE_INSTALL_PREFIX}/include/${PROJECT_NAME})
+SET(find_cmake_DIR ${CMAKE_ROOT}/Modules/)
+
+INSTALL(TARGETS qgvcore
+		ARCHIVE DESTINATION ${LIB_INSTALL_DIR}
+		LIBRARY DESTINATION ${LIB_INSTALL_DIR}
+		COMPONENT library
+	)
+
+FILE(GLOB header "${CMAKE_CURRENT_SOURCE_DIR}/*.h")
+INSTALL(
+		FILES ${header}
+		DESTINATION ${include_DIR}
+		COMPONENT headerfiles
+	)
+

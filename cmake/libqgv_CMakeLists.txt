@@ -1,0 +1,51 @@
+SET(CMAKE_MODULE_PATH ${CMAKE_CURRENT_SOURCE_DIR}/qgv/cmake/modules )
+find_package(Qt5 REQUIRED COMPONENTS Core Widgets Test)
+FIND_PACKAGE(Graphviz REQUIRED)
+set(CMAKE_INCLUDE_CURRENT_DIR ON)
+#set(CMAKE_AUTOMOC ON)
+
+SET(qgvlib_CPP
+	  qgv/private/QGVCore.cpp
+	  qgv/private/QGVGraphPrivate.cpp
+	  qgv/private/QGVEdgePrivate.cpp
+	  qgv/private/QGVGvcPrivate.cpp
+	  qgv/private/QGVNodePrivate.cpp
+	  qgv/QGVEdge.cpp
+	  qgv/QGVNode.cpp
+	  qgv/QGVScene.cpp
+  qgv/QGVSubGraph.cpp
+)
+
+INCLUDE_DIRECTORIES(
+	${GRAPHVIZ_INCLUDE_DIR}
+	qgv
+        qgv/private
+     
+)
+
+
+SET(QT_LIBRARIES
+	Qt5::Core
+	Qt5::Widgets
+        Qt5::Test
+)	
+
+ADD_LIBRARY(qgvcore SHARED
+  ${qgvlib_CPP}
+)
+
+
+TARGET_LINK_LIBRARIES(qgvcore
+  ${QT_LIBRARIES}
+  ${GRAPHVIZ_GVC_LIBRARY}
+  ${GRAPHVIZ_CGRAPH_LIBRARY}
+  ${GRAPHVIZ_CDT_LIBRARY}
+)
+
+SET(qgv_LIBS 
+	${QT_LIBRARIES}
+	${GRAPHVIZ_GVC_LIBRARY}
+	${GRAPHVIZ_CGRAPH_LIBRARY}
+	${GRAPHVIZ_CDT_LIBRARY}
+        qgvcore
+)
