@@ -57,8 +57,8 @@ your own risk. The authors are not responsible or liable for any damages incurre
 
 ### 4. Run Code 
 Example Scripts run.sh, run_inside.sh, run_test.sh    
-The navigation executables requires two arguments:
-a) Path of toplogical map (e.g. ../data/tmap), and 
+The navigation executables requires two arguments:  
+a) Path of toplogical map (e.g. ../data/tmap), and   
 b) IP address of the robot (e.g. 172.19.226.236 to run online with robot) or path of image sequence (e.g. ../data/offlinetest) to run offile with image sequence (localisation mode only). 
 
 
