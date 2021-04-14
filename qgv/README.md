@@ -1,4 +1,6 @@
-# Taken from [https://github.com/nbergont/qgv](https://github.com/nbergont/qgv)
+# qgv
+
+## Taken from [https://github.com/nbergont/qgv](https://github.com/nbergont/qgv)
 
 Interactive Qt graphViz display
 ===============================

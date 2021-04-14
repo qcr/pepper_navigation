@@ -1,3 +1,7 @@
+## Header and Source Files Required for displying Topological Graph in GUI
+# Qt graphViz (qgv) library (https://github.com/nbergont/qgv)
+# Here are the required files used from this library
+
 SET(CMAKE_MODULE_PATH ${CMAKE_CURRENT_SOURCE_DIR}/qgv/cmake/modules )
 find_package(Qt5 REQUIRED COMPONENTS Core Widgets Test)
 FIND_PACKAGE(Graphviz REQUIRED)

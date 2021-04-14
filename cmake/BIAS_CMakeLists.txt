@@ -1,6 +1,6 @@
 ## Header and Source Files Required for Line Segments Detection and Matching
 # BIAS libary (http://www.mip.informatik.uni-kiel.de/tiki-index.php?page=BIAS) is no longer available for download
-# Here are the required code taken from that library
+# Here are the required code taken from this library
 
 set(BIAS_SOURCES  
 

@@ -1,6 +1,8 @@
 #Free Space Naviagtion
 # Suman Raj Bista
 
+# This code requires naoqi and modified visp_naoqi libaries. Please refer to pepper_qi folder for details
+
 cmake_minimum_required(VERSION 3.0)
 project(pepper_fsnav)
 set(CMAKE_PREFIX_PATH
@@ -71,7 +73,7 @@ set (HEADERS DepthImageScanner.cpp /
 
                             )
 
-add_executable(pepper_fsnav pepperevents.cpp ${HEADERS})
+add_executable(pepper_fsnav depthnav_Pepper.cpp ${HEADERS})
 target_link_libraries(pepper_fsnav
 
   ocv_naoqi

@@ -1,11 +1,11 @@
+/* Free sace naviagtion of Pepper Robot using Depth Senosr
+ * Suman Raj Bista */
+
 #include "vpNaoqiRobot.h"
 #include "vpNaoqiGrabber.h"
 #include "vpControl.hpp"
 #include <al/alvisiondefinitions.h>
 #include <al/from_any_value.hpp>
-
-
-
 #include <qi/anyobject.hpp>
 #include <qi/log.hpp>
 #include "freespacenavigation.h"
@@ -279,306 +279,244 @@ int main(int argc, char** argv)
 
   qi::AnyValue val, valL,valR;
 
- int ct = 0;
- int stoptime = 4;
+  int ct = 0;
+  int stoptime = 4;
 
 
- std::vector<std::string> names  = {"HeadYaw", "HeadPitch"};
- std::vector<float> angles = {0.0f, 0.0f};
- motionproxy.call<void>("setAngles", names, angles, 0.175f);
-
-
-
- motionproxy.call<void>("setExternalCollisionProtectionEnabled","All",true);
-
-/* vpPlot plot(1,700,700,100,100,"Dist Laser");
- plot.initGraph(0,2);
- plot.initRange(0,-1,320,-1,1);*/
-
-// fd = memoryproxy.call<qi::AnyValue>("getData","Navigation/AvoidanceNavigator/ObstacleDetected");
- //naoqi::tools::fromAnyValueToFloatVector(fd, result_value);
-//std::cout<<"fid = "<<fd[0] <<"\t"<<fd[1]<<std::endl;
-cv::Mat Id;
-
-for(int i=0;i<10;i++){
-    g.acquiredepth(I);
-   // gd.acquirevoxel(Id);
-   gd.acquire(Id);
-
-}
-
-std::vector<float> tt;
-
-   tt = motionproxy.call<std::vector<float>>("getRobotPosition",true);
-
-  //AL::Math::Pose2D poseinitial(tt);
+  std::vector<std::string> names  = {"HeadYaw", "HeadPitch"};
+  std::vector<float> angles = {0.0f, 0.0f};
+  motionproxy.call<void>("setAngles", names, angles, 0.175f);
 
 
 
+  motionproxy.call<void>("setExternalCollisionProtectionEnabled","All",true);
 
-std::vector<float> tt1;
-tt1 = motionproxy.call<std::vector<float>>("getRobotPosition",false);
+ /* vpPlot plot(1,700,700,100,100,"Dist Laser");
+  plot.initGraph(0,2);
+  plot.initRange(0,-1,320,-1,1);*/
+
+ // fd = memoryproxy.call<qi::AnyValue>("getData","Navigation/AvoidanceNavigator/ObstacleDetected");
+  //naoqi::tools::fromAnyValueToFloatVector(fd, result_value);
+ //std::cout<<"fid = "<<fd[0] <<"\t"<<fd[1]<<std::endl;
+ cv::Mat Id;
+
+ for(int i=0;i<10;i++){
+     g.acquiredepth(I);
+    // gd.acquirevoxel(Id);
+    gd.acquire(Id);
+
+ }
+
+ std::vector<float> tt;
+
+ tt = motionproxy.call<std::vector<float>>("getRobotPosition",true);
+
+ std::vector<float> tt1;
+ tt1 = motionproxy.call<std::vector<float>>("getRobotPosition",false);
+
+ std::ofstream ofile("odotext.txt");
+
+ ct = 0;
+ int i = 0;
+
+ double v[2];
+ v[1] = 0;
+ v[0] = 0.0;
+
+  m_session->registerService("MyService", qi::AnyObject(boost::make_shared<MyService>(memoryproxy/*,robot*/)));
+  cv::namedWindow("disp");
+  char cc;
+ cv::Mat Idd, bd;
+ cv::Mat diffs;
+  cv::setMouseCallback("disp",clickMouse,&cc);
+ cc = 0;
+ double min;
+ double max;
 
 
-//AL::Math::Pose2D pi;
+ freespacenavigation fsn(Kd);
+ fsn.setbasevel(0.18);
+ fsn.setinitialpose(tt);
+ int flag = 0;
+ cv::Mat Igrid;
+ std::vector<double> od;
+ od.reserve(3);
+  robo = &robot;
+   while(1) {
 
 
+       std::cout<<"\n **************************************************************"<<std::endl;
 
-
-
-
-
-
-
-   std::ofstream ofile("odotext.txt");
-
-ct = 0;
-int i = 0;
-
-double v[2];
-v[1] = 0;
-v[0] = 0.0;
-
- m_session->registerService("MyService", qi::AnyObject(boost::make_shared<MyService>(memoryproxy/*,robot*/)));
- cv::namedWindow("disp");
- char cc;
-cv::Mat Idd, bd;
-cv::Mat diffs;
- cv::setMouseCallback("disp",clickMouse,&cc);
-cc = 0;
-double min;
-double max;
-
-
-freespacenavigation fsn(Kd);
-fsn.setbasevel(0.18);
-fsn.setinitialpose(tt);
-int flag = 0;
-cv::Mat Igrid;
-std::vector<double> od;
-od.reserve(3);
- robo = &robot;
-  while(1) {
-
-
-      std::cout<<"\n **************************************************************"<<std::endl;
-
-       const clock_t begin_time = clock();
-      // double t = vpTime::measureTimeMs();
-       g.acquiredepth(I);
-      // gd.acquirevoxel(Id);
+        const clock_t begin_time = clock();
+       // double t = vpTime::measureTimeMs();
+        g.acquiredepth(I);
+       // gd.acquirevoxel(Id);
          gd.acquire(Id);
 
-//plot.resetPointList(0);
-   std::stringstream currimName, currimName2;
-   ct++;
+    //plot.resetPointList(0);
+       std::stringstream currimName, currimName2;
+       ct++;
 
-   if(ct<10)
-    currimName<<"img_0000" <<ct<<".png";
-   else if(ct<100)
-       currimName<<"img_000" <<ct<<".png";
-   else if(ct<1000)
-       currimName<<"img_00" <<ct<<".png";
-   else if(ct<10000)
-       currimName<<"img_0" <<ct<<".png";
-   else
-       currimName<<"img_" <<ct<<".png";
+       if(ct<10)
+        currimName<<"img_0000" <<ct<<".png";
+       else if(ct<100)
+           currimName<<"img_000" <<ct<<".png";
+       else if(ct<1000)
+           currimName<<"img_00" <<ct<<".png";
+       else if(ct<10000)
+           currimName<<"img_0" <<ct<<".png";
+       else
+           currimName<<"img_" <<ct<<".png";
 
- //  dls.setImname(ct);
+     //  dls.setImname(ct);
 
-  /* val = motionproxy.call<qi::AnyValue>("isCollision","Arms");
-   valL = motionproxy.call<qi::AnyValue>("isCollision","LArm");
-   valR = motionproxy.call<qi::AnyValue>("isCollision","RArm");
-   std::cout<<val.asString()<<"\t"<< valL.asString()<<"\t"<<valR.asString()<<std::endl; */
+      /* val = motionproxy.call<qi::AnyValue>("isCollision","Arms");
+       valL = motionproxy.call<qi::AnyValue>("isCollision","LArm");
+       valR = motionproxy.call<qi::AnyValue>("isCollision","RArm");
+       std::cout<<val.asString()<<"\t"<< valL.asString()<<"\t"<<valR.asString()<<std::endl; */
 
-   //std::vector<float> valR, valL;
+       //std::vector<float> valR, valL;
 
-   //valL = motionproxy.call< std::vector<float> >("getChainClosestObstaclePosition", "LArm", 0);
-   //valR = motionproxy.call< std::vector<float> >("getChainClosestObstaclePosition", "RArm", 0);
-
-
- //  std::cout<<"Lt Arm"<<"\t"<<valL[0]<<"\t"<<valL[1]<<"\t"<<valL[2]<<std::endl;
- //  std::cout<<"Rt Arm"<<"\t"<<valR[0]<<"\t"<<valR[1]<<"\t"<<valR[2]<<std::endl;
+       //valL = motionproxy.call< std::vector<float> >("getChainClosestObstaclePosition", "LArm", 0);
+       //valR = motionproxy.call< std::vector<float> >("getChainClosestObstaclePosition", "RArm", 0);
 
 
-   std::vector<float> tx=motionproxy.call<std::vector<float>>("getRobotPosition",true);
-//  AL::Math::Pose2D currPose(tx);
- // std::vector<float> tx1=motionproxy.call<std::vector<float>>("getRobotPosition",false);
-
-//   AL::Math::Pose2D diffpose =  AL::Math::pose2DInverse(currPose)*poseinitial;
-
-fsn.setcurrentpose(tx);
-
-    //std::cout<<"I pose ="<<pi.x<<"\t"<<pi.y<<"\t"<<pi.theta<<std::endl;
-   //  std::cout<<"I posed ="<<diffpose.x<<"\t"<<diffpose.y<<"\t"<<diffpose.theta<<std::endl;
-
-   motionproxy.call<void>("setAngles", names, angles, 0.175f);
- cv::imwrite(currimName.str(),Id);
-//cv::medianBlur(I,I,7);
-double fs = 0;
-std::vector<double> wr;
-wr.reserve(4);
-std::vector<double> WR;
-WR.reserve(4);
-
-double fs1 = 0.0;
-double fs2 = 0.0;
-double fs3 = 0.0;
-double fsx = 0.0;
-
-/*if(ct==1){ od[0]=0; od[1]=0; od[2]=0;}
- else{
-
-od[0] = -diffpose.x;
-od[1] = diffpose.y;
-od[2] = diffpose.theta;
-}
-
-poseinitial = currPose;
-*/
-//dls.readlasersonar(memoryproxy);
-//fsconvert_msg(I,Igrid, od,wr,WR);
-fs = fsn.getvelfreespace(I);
+     //  std::cout<<"Lt Arm"<<"\t"<<valL[0]<<"\t"<<valL[1]<<"\t"<<valL[2]<<std::endl;
+     //  std::cout<<"Rt Arm"<<"\t"<<valR[0]<<"\t"<<valR[1]<<"\t"<<valR[2]<<std::endl;
 
 
-  cv::minMaxIdx(I, &min, &max);
+       std::vector<float> tx=motionproxy.call<std::vector<float>>("getRobotPosition",true);
+    //  AL::Math::Pose2D currPose(tx);
+     // std::vector<float> tx1=motionproxy.call<std::vector<float>>("getRobotPosition",false);
 
- cv::convertScaleAbs(I, bd, 255 / max);
+    //   AL::Math::Pose2D diffpose =  AL::Math::pose2DInverse(currPose)*poseinitial;
+
+    fsn.setcurrentpose(tx);
+
+        //std::cout<<"I pose ="<<pi.x<<"\t"<<pi.y<<"\t"<<pi.theta<<std::endl;
+       //  std::cout<<"I posed ="<<diffpose.x<<"\t"<<diffpose.y<<"\t"<<diffpose.theta<<std::endl;
+
+       motionproxy.call<void>("setAngles", names, angles, 0.175f);
+     cv::imwrite(currimName.str(),Id);
+    //cv::medianBlur(I,I,7);
+    double fs = 0;
+    std::vector<double> wr;
+    wr.reserve(4);
+    std::vector<double> WR;
+    WR.reserve(4);
+
+    double fs1 = 0.0;
+    double fs2 = 0.0;
+    double fs3 = 0.0;
+    double fsx = 0.0;
+
+    /*if(ct==1){ od[0]=0; od[1]=0; od[2]=0;}
+     else{
+
+    od[0] = -diffpose.x;
+    od[1] = diffpose.y;
+    od[2] = diffpose.theta;
+    }
+
+    poseinitial = currPose;
+    */
+    //dls.readlasersonar(memoryproxy);
+    //fsconvert_msg(I,Igrid, od,wr,WR);
+    fs = fsn.getvelfreespace(I);
 
 
- //fs1 = wr[0]; fs2 = wr[1]; fs3 =  wr[2]; fsx = wr[4];
+      cv::minMaxIdx(I, &min, &max);
 
- //* wr[0] =  ((fs1-0)+fs1*0.18/1)/(1+fs1*fs1);
- // wr[1] =  ((fs2-0)+fs2*0.18/2)/(1+fs2*fs2);
-  //wr[2] =  ((fs3-0)+fs3*0.18/3.25)/(1+fs3*fs3);
-//  wr[3] =  ((fsx-0)+fsx*0.18/0.9)/(1+fsx*fsx);
-
-/*for(int idx=0;idx<320;idx++){
-  //std::cout<<lscan[idx]<<"\t";
-  if(!std::isnan(lscan[idx]))
-  plot.plot(0,0,idx*1.0,lscan[idx]);
-}
-std::cout<<std::endl;*/
-
-  cv::imshow("disp",bd);
-//cv::imwrite(currimName.str(),bd);
-//cv::imshow("2dgrid",Igrid);
-
-   cv::waitKey(10);
+     cv::convertScaleAbs(I, bd, 255 / max);
 
 
+     //fs1 = wr[0]; fs2 = wr[1]; fs3 =  wr[2]; fsx = wr[4];
 
-  //std::cout<<std::endl;
+     //* wr[0] =  ((fs1-0)+fs1*0.18/1)/(1+fs1*fs1);
+     // wr[1] =  ((fs2-0)+fs2*0.18/2)/(1+fs2*fs2);
+      //wr[2] =  ((fs3-0)+fs3*0.18/3.25)/(1+fs3*fs3);
+    //  wr[3] =  ((fsx-0)+fsx*0.18/0.9)/(1+fsx*fsx);
 
-   /* fs = (0.6*wr[1] + 0.4*wr[2]);
+    /*for(int idx=0;idx<320;idx++){
+      //std::cout<<lscan[idx]<<"\t";
+      if(!std::isnan(lscan[idx]))
+      plot.plot(0,0,idx*1.0,lscan[idx]);
+    }
+    std::cout<<std::endl;*/
 
-  // if((wr[1]>0 &wr[2]<0) | (wr[1]<0 & wr[2]>0)){ fs = (0.5*wr[1] + 0.5*wr[0]);}
-    if(std::isnan(wr[2])) fs = (0.5*wr[1] + 0.5*wr[0]);
-    if(std::isnan(wr[1])) fs = (0.6*wr[3] + 0.4*wr[0]);
-    if(std::isnan(wr[0]) )  fs = std::numeric_limits<float>::quiet_NaN();
+      cv::imshow("disp",bd);
+    //cv::imwrite(currimName.str(),bd);
+    //cv::imshow("2dgrid",Igrid);
 
-*/
-
-//memoryproxy.call<void>("subscribeToMicroEvent","ALMotion/MoveFailed","MyModule","helloo","mycallback");
-
-//  g.acquirevoxel(Id);
-
-   std::cout<<"\n ......................................................"<<std::endl;
-
-if(std::isnan(fs)){
-    v[0] = 0;
-    v[1] = 0;
-   std::cout<<"obs det"<<std::endl;
-
-}
-else{
-
-  v[0]= 0.2;
-//  v[1] = (0.1*(fs-0)+fs*v[0]/2)/(1+fs*fs);
-  v[1] = fs;
-  std::cout<<"wro = "<<v[1]<<std::endl;
-  if(fabs(v[1]>0.3))
-      v[1] = 0.3*v[1]/fabs(v[1]);
+       cv::waitKey(10);
 
 
 
-}
-double wrx = v[1];
-  std:: cout<<"wr = "<<v[1]<<std::endl;
-  if(fabs(wrx)<0.00001) std::cout<<"STRAIGHT"<<std::endl;
-  else if(wrx>0) std::cout<<"LEFT"<<std::endl;
-  else if(wrx<0) std::cout<<"RIGHT"<<std::endl;
-  else  std::cout<<"STRAIGHT"<<std::endl;
- // v[0] = 0;
-//v[1] = 0;
-    //fd = memoryproxy.call<std::vector<float> >("getData","Navigation/AvoidanceNavigator/ObstacleDetected");
-    //naoqi::tools::fromAnyValueToFloatVector(fd, result_value);
-//std::cout<<"fid = "<<fd[0] <<"\t"<<fd[1]<<std::endl;
-if(flag==1){flag =0; v[0]=0.0; v[1]=0.0;}
+      //std::cout<<std::endl;
 
-  std::cout<<std::setw(5)<<"Odo red = "<<std::setw(12)<<tx[0]-tt[0]<<"\t"<<std::setw(12)<<tx[1]-tt[1]<<"\t"<<std::setw(12)<<tx[2]-tt[2]<<"\t"<<std::setw(12)<<std::endl;
- //  ofile<<std::setw(5)<<ct+1<<std::setw(12)<<od[0]<<"\t"<<std::setw(12)<<od[1]<<"\t"<<std::setw(12)<<od[2]<<"\t"<<std::setw(12)<<tt1[0]-tx1[0]<<"\t"<<std::setw(12)<<tt1[1]-tx1[1]<<"\t"<<std::setw(12)<<tt1[2]-tx1[2]<<std::endl;
- //ofile<<std::setw(5)<<ct+1<<std::setw(12)<<od[0]<<"\t"<<std::setw(12)<<od[1]<<"\t"<<std::setw(12)<<od[2]<<"\t"<<std::setw(12)<<diffpose.x<<"\t"<<std::setw(12)<<diffpose.y<<"\t"<<std::setw(12)<<diffpose.theta<<"\t"<<v[1]<<std::endl;
-    if (cc != 0){
+       /* fs = (0.6*wr[1] + 0.4*wr[2]);
+
+      // if((wr[1]>0 &wr[2]<0) | (wr[1]<0 & wr[2]>0)){ fs = (0.5*wr[1] + 0.5*wr[0]);}
+        if(std::isnan(wr[2])) fs = (0.5*wr[1] + 0.5*wr[0]);
+        if(std::isnan(wr[1])) fs = (0.6*wr[3] + 0.4*wr[0]);
+        if(std::isnan(wr[0]) )  fs = std::numeric_limits<float>::quiet_NaN();
+
+    */
+
+    //memoryproxy.call<void>("subscribeToMicroEvent","ALMotion/MoveFailed","MyModule","helloo","mycallback");
+
+    //  g.acquirevoxel(Id);
+
+       std::cout<<"\n ......................................................"<<std::endl;
+
+    if(std::isnan(fs)){
+        v[0] = 0;
+        v[1] = 0;
+       std::cout<<"obs det"<<std::endl;
+
+    }
+    else{
+
+      v[0]= 0.2;
+    //  v[1] = (0.1*(fs-0)+fs*v[0]/2)/(1+fs*fs);
+      v[1] = fs;
+      std::cout<<"wro = "<<v[1]<<std::endl;
+      if(fabs(v[1]>0.3))
+          v[1] = 0.3*v[1]/fabs(v[1]);
 
 
-     robot.setBaseVelocity(0.0,0.0,0.0);
 
-      //   std::cout<<"place any key to continue (l,L,r,R,s) :";
-       //  char cc;
+    }
+    double wrx = v[1];
+      std:: cout<<"wr = "<<v[1]<<std::endl;
+      if(fabs(wrx)<0.00001) std::cout<<"STRAIGHT"<<std::endl;
+      else if(wrx>0) std::cout<<"LEFT"<<std::endl;
+      else if(wrx<0) std::cout<<"RIGHT"<<std::endl;
+      else  std::cout<<"STRAIGHT"<<std::endl;
+     // v[0] = 0;
+    //v[1] = 0;
+        //fd = memoryproxy.call<std::vector<float> >("getData","Navigation/AvoidanceNavigator/ObstacleDetected");
+        //naoqi::tools::fromAnyValueToFloatVector(fd, result_value);
+    //std::cout<<"fid = "<<fd[0] <<"\t"<<fd[1]<<std::endl;
+    if(flag==1){flag =0; v[0]=0.0; v[1]=0.0;}
+
+      std::cout<<std::setw(5)<<"Odo red = "<<std::setw(12)<<tx[0]-tt[0]<<"\t"<<std::setw(12)<<tx[1]-tt[1]<<"\t"<<std::setw(12)<<tx[2]-tt[2]<<"\t"<<std::setw(12)<<std::endl;
+     //  ofile<<std::setw(5)<<ct+1<<std::setw(12)<<od[0]<<"\t"<<std::setw(12)<<od[1]<<"\t"<<std::setw(12)<<od[2]<<"\t"<<std::setw(12)<<tt1[0]-tx1[0]<<"\t"<<std::setw(12)<<tt1[1]-tx1[1]<<"\t"<<std::setw(12)<<tt1[2]-tx1[2]<<std::endl;
+     //ofile<<std::setw(5)<<ct+1<<std::setw(12)<<od[0]<<"\t"<<std::setw(12)<<od[1]<<"\t"<<std::setw(12)<<od[2]<<"\t"<<std::setw(12)<<diffpose.x<<"\t"<<std::setw(12)<<diffpose.y<<"\t"<<std::setw(12)<<diffpose.theta<<"\t"<<v[1]<<std::endl;
+
+      if (cc != 0){
+
+
+         robot.setBaseVelocity(0.0,0.0,0.0);
          std::cin>>cc;
 
-         if(cc=='s'){
-             cc = 0;
-             break;
-         }
+             if(cc=='s'){
+                 cc = 0;
+                 break;
+             }
+              cc = 0;
+           }
 
-      /*   else if(cc=='l')
-         {
-            // robot.enableMotors();
-             v[0] = 0.05;
-             v[1] = 0.04;
-
-            //robot.setBaseVelocity(v[0],0.0,v[1]);
-         }
-
-         else if(cc=='L')
-         {
-           //  robot.enableMotors();
-             v[0] = 0.05;
-             v[1] = 0.05;
-
-           //  robot.setBaseVelocity(v[0],0.0,v[1]);
-         }
-
-         else if(cc=='r')
-                  {
-                     // robot.enableMotors();
-                      v[0] = 0.05;
-                      v[1] = -0.04;
-
-                   //  robot.setBaseVelocity(v[0],0.0,v[1]);
-                  }
-
-         else if(cc=='R')
-                  {
-                     // robot.enableMotors();
-                      v[0] = 0.05;   if(z>1.0)
-                      v[1] = -0.05;
-
-                   //  robot.setBaseVelocity(v[0],0.0,v[1]);
-         }
-
-
-         else{
-           //    robot.enableMotors();
-           v[0] = 0.1;
-           v[1] = 0.00;
-
-         //  robot.setBaseVelocity(v[0],0.0,v[1]);
-         }*/
-          cc = 0;
-       }
 if(eventraised){
     eventraised = false;
        robot.setBaseVelocity(0.0,0.0,0.0);
@@ -601,15 +539,6 @@ else{
       i++;
      }
 
-
-
-  //robot.setBaseVelocity(0.0,0.0,0.0);
-
-
-//std::cout << std::setprecision(6) << std::fixed;
-// for(int i=0;i<poselist.size();i++)
- // ofile<<std::setw(5)<<i+1<<std::setw(12)<<poselist[i][0]<<"\t"<<std::setw(12)<<poselist[i][1]<<"\t"<<std::setw(12)<<poselist[i][2]<<std::endl;
- //ofile.close();
 
 
   ofile.close();
