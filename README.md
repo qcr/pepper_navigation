@@ -65,7 +65,8 @@ ________________________________________________________________________________
 
 The navigation executables require two arguments:  
 &nbsp;&nbsp;&nbsp;&nbsp; a. &nbsp; Path of topological map (e.g. `../data/tmap`), and   
-&nbsp;&nbsp;&nbsp;&nbsp; b. &nbsp; IP address of the robot (e.g. `172.19.226.236` to run online with robot) or path of the image sequence (e.g. `../data/offlinetest`) to run offline with image sequence (localisation mode only). 
+&nbsp;&nbsp;&nbsp;&nbsp; b. &nbsp; IP address of the robot (e.g. `172.19.226.236` to run online with robot) or path of the image sequence  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (e.g. `../data/offlinetest`) to run offline with image sequence (localisation mode only). 
 
 
 **For details, please refer to docs/TechnicalReport.pdf (available soon !!) and README.MD at subfolders of this repository.**
