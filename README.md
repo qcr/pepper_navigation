@@ -1,7 +1,7 @@
 ## Pepper_navigation
 
 This repository contains the source code accompanying our paper Image-Based Indoor Topological Navigation with Collision Avoidance for Resource-Constrained Mobile Robots as
-discussed in [paper_link].
+discussed in [paper_link].  
 
 The code is open source. The codes are provided “as-is” without any warranty. Before using the code, you agree to use the code at
 your own risk. The authors are not responsible or liable for any damages incurred using this code.
