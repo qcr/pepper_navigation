@@ -1,8 +1,8 @@
-/* Interface with for offline mode
+/* Interface in offline mode
  * higher level functionlities
- * Read images from the folder and do image based loclization only
+ * Read images from the folder and oerform image-based localisation only
  * Pepper robot not use
- * for image based loclaiztion only
+ * for image-based localisation only
  * for debugging purposes
  *
  *
@@ -20,6 +20,7 @@
 */
 /*
  * Author: Suman Raj Bista
+ * ACRV @ QUT
  */
 
 

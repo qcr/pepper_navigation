@@ -1,6 +1,6 @@
-/* Top level virtual fucntion for interface with Pepper robot or just image sequences
+/* Top level virtual functions for interface with Pepper robot or just image sequences
  * See pepperRobot.h for interface with Peepper for online navigation
- * See pepperOffline.h for just image-based localization in opffline mode
+ * See pepperOffline.h / pepperRobotVirtual.h for just image-based localization in offline mode
  *
  *
 * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"

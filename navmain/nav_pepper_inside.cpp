@@ -1,5 +1,7 @@
 /* Main file
- *
+ * Toplologocal Navigation that is capable to run onboard on Pepper Robot (must be compiled in Pepper Virtual Machine)
+ * Non-GUI version of topological navigation. 
+ * Pepper Virtual Machine link : https://bitbucket.org/pepper_qut/virtual-machine.git
  *
 * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
 * AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE

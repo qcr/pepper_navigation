@@ -12,7 +12,8 @@
 */
 /*
  * Author: Suman Raj Bista
- * Topological Naviagtion GUI version
+ * Topological Naviagtion non GUI version
+ * This version is able to run onboard
  */
 
 

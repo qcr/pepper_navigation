@@ -12,7 +12,8 @@
 */
 /*
  * Author: Suman Raj Bista
- * Topological Naviagtion GUI version
+ * Topological Naviagtion non GUI version
+ * This version is able to run onboard
  */
 
 #include "opencv2/highgui/highgui_c.h"
@@ -30,10 +31,6 @@ NavInside::NavInside()
     
      clickflag = 0;
      clickdisableflag = 1;
-
-
-   
-
     
     start = 0;
     goal = 0;
@@ -50,12 +47,6 @@ NavInside::NavInside()
     kk = 0;
 
 }
-
-
-
-
-
-
 
 
 NavInside::~NavInside()
@@ -146,9 +137,6 @@ void NavInside::selectKeyImages(int ct, std::vector<int> &optpath){
       std::cout << "\n Shortest path from " << name[start] << " to "
                       << name[goal] << ": ";
 
-
-
-
      std::cout << name[optpath.at(0)];
 
      for(int i=1;i<pl-1;i++)
@@ -172,13 +160,9 @@ void NavInside::selectKeyImages(int ct, std::vector<int> &optpath){
        }
        std::cout<<std::endl;
 
-
-
         kf = tp->setpathkim(optpath);
 
-       showkim(/*kf*/);
-
-      
+       showkim(/*kf*/);  
 
        int dirf = tp->getdirflag();
 
@@ -458,8 +442,6 @@ void NavInside::performNavigation(){
 
         int excpflag = 0;
      
-
-
 
         while(1){
             kk++;

@@ -17,7 +17,7 @@ SET(qgvlib_CPP
 	  qgv/QGVEdge.cpp
 	  qgv/QGVNode.cpp
 	  qgv/QGVScene.cpp
-  qgv/QGVSubGraph.cpp
+          qgv/QGVSubGraph.cpp
 )
 
 INCLUDE_DIRECTORIES(

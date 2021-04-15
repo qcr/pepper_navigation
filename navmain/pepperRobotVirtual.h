@@ -1,4 +1,5 @@
-/* Interface with virtual pepper (images from folder)via ppper_qi
+/* Interface with virtual Pepper (images read from folder)
+ * simulated functions for testing or offine localisation
  * higher level functionlities => just for testing 
  *
 * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
@@ -15,6 +16,7 @@
 */
 /*
  * Author: Suman Raj Bista
+ * ACRV @ QUT
  */
 
 

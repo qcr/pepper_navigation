@@ -175,16 +175,6 @@ int main(int argc, char** argv)
 
              d->setDisptime(100);
 
-
-
-
-
-
-
-
-
-
-
             nav.initlocalisation(cim,kf);
           //  cv::waitKey(0);
 
@@ -194,10 +184,6 @@ int main(int argc, char** argv)
 
           std::vector<std::string>  bodyname = robot.getBodyNames("Body");
           std::vector<float> values(bodyname.size(),0.0);
-
-
-
-
 
       //  std::string currim;
          int flag;

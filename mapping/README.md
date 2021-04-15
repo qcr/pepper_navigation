@@ -36,6 +36,7 @@ The reference image folder will contain
 	2. The text files with the detected line segments and their descriptors. 
        There is one .txt file for each reference image.
 
-### Creating Toplogical Map for Naviagtion
+## Creating Toplogical Map for Naviagtion
+Bista SR, Ward B, Corke P. Image-Based Indoor Topological Navigation with Collision Avoidance for Resource-Constrained Mobile Robots.  
 
 To build topological map, please refer to < report > in [*../docs*](https://github.com/suuman/pepper_navigation/tree/main/docs) folder.
