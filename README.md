@@ -14,7 +14,7 @@ your own risk. The authors are not responsible or liable for any damages incurre
 4. [naoqi_libqi](http://wiki.ros.org/naoqi_libqi) and [naoqi_libqicore](http://wiki.ros.org/naoqi_libqicore) (ROS Package),
 5. [ARPACK++](http://www.ime.unicamp.br/~chico/arpack++/), [ARPACK](https://www.caam.rice.edu/software/ARPACK/), [BLAS](http://www.netlib.org/blas/), [LAPACK](http://www.netlib.org/lapack/), and [SuperLU](https://portal.nersc.gov/project/sparse/superlu/) (for line segment matching),
 6. [Qt5](https://doc.qt.io/qt-5/index.html) ([Core](https://doc.qt.io/qt-5/qtcore-index.html), [Widgets](https://doc.qt.io/qt-5/qtwidgets-index.html), [Test](https://doc.qt.io/qt-5/qttest-index.html)) (for GUI),
-7. [Graphviz](https://graphviz.org/) ([GVC](https://graphviz.org/pdf/gvc.3.pdf), [CGRAPH](https://graphviz.org/pdf/cgraph.3.pdf), [CDT](https://graphviz.org/pdf/cdt.3.pdf))(for visualising topological graph),
+7. [Graphviz](https://graphviz.org/) ([GVC](https://graphviz.org/pdf/gvc.3.pdf), [CGRAPH](https://graphviz.org/pdf/cgraph.3.pdf), [CDT](https://graphviz.org/pdf/cdt.3.pdf)) (for visualising topological graph),
 8. [Pepper Virtual Machine](https://bitbucket.org/pepper_qut/virtual-machine.git) and [VirtualBox](https://www.virtualbox.org) (to compile binaries that can run onboard on the Pepper Robot),
 9. [qgv](https://github.com/suuman/pepper_navigation/tree/main/qgv) and [pepper_qi](https://github.com/suuman/pepper_navigation/tree/main/pepper_qi) (custom libraries that are shipped with this repository).
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -73,6 +73,7 @@ The navigation executables require two arguments:
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ## References
 [1] Bista SR, Ward B, Corke P. Image-Based Indoor Topological Navigation with Collision Avoidance for Resource-Constrained Mobile Robots.   
+
 [2] Bista SR, Giordano PR, Chaumette F. Appearance-based indoor navigation by IBVS using line segments. IEEE Robotics and Automation Letters. 2016 Jan 26;1(1):423-30.
 
 ###
