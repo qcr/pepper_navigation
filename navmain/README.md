@@ -24,7 +24,7 @@ Bista SR, Ward B, Corke P. Image-Based Indoor Topological Navigation with Collis
 7. ***topmapprocessor*** ([*topograph_processor.h*](https://github.com/suuman/pepper_navigation/blob/main/navmain/topograph_processor.h)) => Top-level interface for processing topological map (reads topological graph and reference images from disk for navigation).
 8. ***astar*** ([*topograph_astar.h*](https://github.com/suuman/pepper_navigation/blob/main/navmain/topograph_astar.h)) => Performs A* search in the graph. Modified code from [Boost Graph Library example : astar-cities](https://www.boost.org/doc/libs/1_54_0/libs/graph/example/astar-cities.cpp)).
 
-9. ***pepperServices*** ([*pepperevents.h*](URL)) => Subscribe to Pepper robot's internal events related to move and collision.
+9. ***pepperServices*** ([*pepperevents.h*](https://github.com/suuman/pepper_navigation/blob/main/navmain/pepperevents.h)) => Subscribe to Pepper robot's internal events related to move and collision.
 
 ### Executables
 1. ***peppernav_gui*** ([*nav_peppergui.cpp*](https://github.com/suuman/pepper_navigation/blob/main/navmain/nav_peppergui.cpp)) => Topological navigation of the Pepper robot with GUI. The code has to be executed on the external PC connecting to the Pepper robot remotely.  

@@ -7,7 +7,7 @@ https://github.com/suuman/selectKeyImagesLines.git
 
 ## Build
 
-	1. Get Source codes from the repository
+	1. Get Source codes from the repository.
 		$ git clone https://github.com/suuman/selectKeyImagesLines.git
 	
 	2. Build executables required for mapping. 

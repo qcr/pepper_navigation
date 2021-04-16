@@ -15,4 +15,4 @@ Uses OpenCV for displaying the image in QT UI.
 Code taken from [OpenCV highgui module repository](https://github.com/opencv/opencv/tree/master/modules/highgui/src).
 
 #### Usage
-please refer to the [Reference Manual](https://github.com/suuman/pepper_navigation/tree/main/docs/Pepper_Navigation_Reference_Manual.pdf) in [*../docs*](https://github.com/suuman/pepper_navigation/tree/main/docs) folder.
+Please refer to the [Reference Manual](https://github.com/suuman/pepper_navigation/tree/main/docs/Pepper_Navigation_Reference_Manual.pdf) in [*../docs*](https://github.com/suuman/pepper_navigation/tree/main/docs) folder.
