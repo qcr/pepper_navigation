@@ -13,7 +13,7 @@ Bista SR, Ward B, Corke P. Image-Based Indoor Topological Navigation with Collis
 
 **Reference of the original code**  
   
-E. Marchand, F. Spindler, F. Chaumette. ViSP for visual servoing: a generic software platform with a wide class of robot control skills. IEEE Robotics and Automation Magazine, Special Issue on “Software Packages for Vision-Based Control of Motion”, P. Oh, D. Burschka (Eds.), 12(4):40-52, December 2005.
+E. Marchand, F. Spindler, F. Chaumette. ViSP for visual servoing: a generic software platform with a wide class of robot control skills. IEEE Robotics and Automation Magazine, Special Issue on “Software Packages for Vision-Based Control of Motion”, P. Oh, D. Burschka (Eds.), 12(4):40-52, December 2005. https://visp.inria.fr/
   
 **This modified code supports image acquistion from depth camera.**
 
