@@ -1,10 +1,11 @@
-## Mapping
+# Mapping
 
 ### Selection of Reference Images Based on Line Segment Matching 
 Bista SR, Giordano PR, Chaumette F. Appearance-based indoor navigation by IBVS using line segments. IEEE Robotics and Automation Letters. 2016 Jan 26;1(1):423-30.
 
 https://github.com/suuman/selectKeyImagesLines.git
-### Build
+
+## Build
 
 	1. Get Source codes from the repository
 		$ git clone https://github.com/suuman/selectKeyImagesLines.git
@@ -12,12 +13,12 @@ https://github.com/suuman/selectKeyImagesLines.git
 	2. Build executables required for mapping. 
 		$ ./build_linematching.sh
 	
-The above command will build executables detectinesED and matchlines to ./linematching folder and is equivalent to the following commands
+The above command will build executables ***detectinesED*** and ***matchlines*** to *./linematching* folder and is equivalent to the following commands
 	
 	        $ cd linematching/Linematching_iso && mkdir build $$ cd build 
 	        $ cmake .. && make -j8
  
-### Usage
+## Usage
  The code for the mapping is in Matlab. Make sure the line detection and matching codes have been properly built and executables have been placed in the correct folder.  
  For selecting the reference images, we need to provide the path of the image sequence folder and the folder to store the reference images.
 
@@ -39,4 +40,4 @@ The reference image folder will contain
 ## Creating Toplogical Map for Naviagtion
 Bista SR, Ward B, Corke P. Image-Based Indoor Topological Navigation with Collision Avoidance for Resource-Constrained Mobile Robots.  
 
-To build topological map, please refer to < report > in [*../docs*](https://github.com/suuman/pepper_navigation/tree/main/docs) folder.
+To build a topological map from reference images, please refer to the [Reference Manual](https://github.com/suuman/pepper_navigation/tree/main/docs/Pepper_Navigation_Reference_Manual.pdf) in [*../docs*](https://github.com/suuman/pepper_navigation/tree/main/docs) folder.
