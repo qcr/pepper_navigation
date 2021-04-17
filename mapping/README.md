@@ -19,8 +19,8 @@ The above command will build executables ***detectinesED*** and ***matchlines***
 	        $ cmake .. && make -j8
  
 ## Usage
- The code for the mapping is in Matlab. Make sure the line detection and matching codes have been properly built and executables have been placed in the correct folder.  
- For selecting the reference images, we need to provide the path of the image sequence folder and the folder to store the reference images.
+The code for the mapping is in Matlab. Make sure the line detection and matching codes have been properly built and executables have been placed in the correct folder.  
+For selecting the reference images, we need to provide the path of the image sequence folder and the folder to store the reference images.
 
 	1. Open selectRefImages.m
 	

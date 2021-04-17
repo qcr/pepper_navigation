@@ -36,7 +36,7 @@ your own risk. The authors are not responsible or liable for any damages incurre
   `$ cd pepper_navigation/mapping`  
   `$ ./build_linematching.sh`
 
-  The above command will build executables ***detectinesED*** and ***matchlines*** to *./linematching* folder and is equivalent to the following commands  
+  The above command will build executables ***detectinesED*** and ***matchlines*** in *./linematching* folder and is equivalent to the following commands  
    `$ cd linematching/Linematching_iso && mkdir build $$ cd build`  
   ` $ cmake .. && make -j8`
 ### 4. Build Navigation code
@@ -60,7 +60,7 @@ ________________________________________________________________________________
 
 2. ***peppernav_inside*** => Topological navigation of the Pepper robot. It is capable of running onboard on the Pepper robot.  
 
-3. ***peppernavigation*** => Navigation of the Pepper robot along the single reference image list. It is capable of running onboard on Pepper robot.  
+3. ***peppernavigation*** => Navigation of the Pepper robot along the single reference image list. It is capable of running onboard on the Pepper robot.  
 
 4. ***peppernavigationoff*** => Offline localisation mode from the image sequence. It does not require a robot (Images read from the folder).  
 
@@ -77,7 +77,7 @@ The navigation executables require two arguments:
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (e.g. `../data/offlinetest`) to run offline with image sequence (localisation mode only). 
 
 
-**For details, please refer to [docs/Pepper_Navigation_Reference_Manual.pdf](https://github.com/suuman/pepper_navigation/tree/main/docs/Pepper_Navigation_Reference_Manual.pdf) (available soon !!) and README.MD at subfolders of this repository.**
+**For details, please refer to [docs/Pepper_Navigation_Reference_Manual.pdf](https://github.com/suuman/pepper_navigation/tree/main/docs/Pepper_Navigation_Reference_Manual.pdf) and README.MD at subfolders of this repository.**
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ## References

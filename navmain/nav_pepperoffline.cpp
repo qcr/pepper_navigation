@@ -26,7 +26,7 @@
 using namespace std;
 
 void usage(int argc, char** argv){
-    std::cout<<"Usage: "<<argv[0]<<" Imgpath "<<" keyframepath " <<std::endl;
+    std::cout<<"Usage: "<<argv[0]<<" keyframepath "<<" Imgpath " <<std::endl;
 }
 
 

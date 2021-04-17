@@ -1,7 +1,7 @@
 ## navmain/maingui
 
 * Interface for Topological Navigation.  
-* GUI version of topological navigation runs on a remote PC. The code communicates with the Peper robot remotely via the naoqi interface.  
+* GUI version of topological navigation runs on a remote PC. The code communicates with the Pepper robot remotely via the naoqi interface.  
 * Non-GUI version of topological navigation is capable of running onboard on the Pepper robot if the code is complied in the [Pepper Virtual Machine](https://bitbucket.org/pepper_qut/virtual-machine.git).
 
 #### Topological Navigation 

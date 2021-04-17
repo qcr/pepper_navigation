@@ -33,7 +33,7 @@ Bista SR, Ward B, Corke P. Image-Based Indoor Topological Navigation with Collis
 
 3. ***peppernavigation*** ([*nav_pepperonline.cpp*](https://github.com/suuman/pepper_navigation/blob/main/navmain/nav_pepperonline.cpp)) => Image-based Naviagtion of the Pepper robot along the single reference image list.   
 
-5. ***peppernavigationoff*** ([*pepperOffline.cpp*](https://github.com/suuman/pepper_navigation/blob/main/navmain/pepperOffline.cpp)) => Image-based Localisation along the reference image list. This is the offline mode that uses image sequence and does not require the robot.  
+5. ***peppernavigationoff*** ([*nav_pepperoffline.cpp*](https://github.com/suuman/pepper_navigation/blob/main/navmain/nav_pepperoffline.cpp)) => Image-based Localisation along the reference image list. This is the offline mode that uses image sequence and does not require the robot.  
 
     **Note: The executables *peppernav_inside* and  *peppernavigation* are capable of running onboard on the Pepper robot provided that they are compiled in the [Pepper Virtual Machine](https://bitbucket.org/pepper_qut/virtual-machine.git) [1]. For details, please refer to the [Reference Manual](https://github.com/suuman/pepper_navigation/tree/main/docs/Pepper_Navigation_Reference_Manual.pdf) in [*../docs*](https://github.com/suuman/pepper_navigation/tree/main/docs) folder.**  
   
