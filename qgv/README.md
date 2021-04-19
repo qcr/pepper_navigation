@@ -1,7 +1,8 @@
 # qgv
 
 ## Interactive Qt graphViz display
-[https://github.com/nbergont/qgv](https://github.com/nbergont/qgv)
+Interactive Qt GraphViz display library used to display the topological graph in [the GUI version of the source code](https://github.com/suuman/pepper_navigation/blob/main/navmain/nav_peppergui.cpp).  
+Taken from [https://github.com/nbergont/qgv](https://github.com/nbergont/qgv).
 
 ## Dependencies
 1. [Qt5](https://doc.qt.io/qt-5/index.html) ([Core](https://doc.qt.io/qt-5/qtcore-index.html), [Widgets](https://doc.qt.io/qt-5/qtwidgets-index.html), [Test](https://doc.qt.io/qt-5/qttest-index.html))

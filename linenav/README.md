@@ -12,7 +12,7 @@ Bista SR, Giordano PR, Chaumette F. Appearance-based indoor navigation by IBVS u
 3. [ARPACK++](http://www.ime.unicamp.br/~chico/arpack++/), [ARPACK](https://www.caam.rice.edu/software/ARPACK/), [BLAS](http://www.netlib.org/blas/), [LAPACK](http://www.netlib.org/lapack/), [SuperLU](https://portal.nersc.gov/project/sparse/superlu/).
 
 ## Usage
-1. To use the original line detection and matching code based on the legacy BIAS library, use the codes inside the [*edlbd/*](https://github.com/suuman/pepper_navigation/tree/main/linenav/edlbd) folder.  
+1. To use the original line detection and matching code based on the legacy BIAS library (shipped with this repository [here](https://github.com/suuman/pepper_navigation/tree/main/linenav/edlbd/BIAS)), use the codes inside the [*edlbd/*](https://github.com/suuman/pepper_navigation/tree/main/linenav/edlbd) folder.  
 If you do not want to use the legacy BIAS library, the line detection and matching based on OpenCV is used.  
 Please refer to [*../CMakeLists.txt*](https://github.com/suuman/pepper_navigation/blob/main/CMakeLists.txt).
 

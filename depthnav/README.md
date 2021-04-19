@@ -22,9 +22,9 @@ Refer [*depthnav_Pepper.cpp*](https://github.com/suuman/pepper_navigation/blob/m
 1. To use the depthnav library, please refer to class ***freespacenavigation*** (*[freespacenavigation.h](https://github.com/suuman/pepper_navigation/blob/main/depthnav/freespacenavigation.h)*, *[freespacenavigation.cpp](https://github.com/suuman/pepper_navigation/blob/main/depthnav/freespacenavigation.cpp))*.  
   
 2. Other classes and functions:  
-     - ***depthimagescanner*** ([*DepthImageScanner.h*](pepper_navigation/depthnav/DepthImageScanner.h), [*DepthImageScanner.cpp*](https://github.com/suuman/pepper_navigation/blob/main/depthnav/DepthImageScanner.cpp)) => Creates 2D grid map from depth image. 
-     - ***depth_traits*** ([*depth_traits.h*](https://github.com/suuman/pepper_navigation/blob/main/depthnav/depth_traits.h)) => Template function to process depth image obtained from [ros *depthimage_to_laserscan*](https://github.com/ros-perception/depthimage_to_laserscan) library.
-     - ***pepperlaser*** ([*pepperlaser.h*](https://github.com/suuman/pepper_navigation/blob/main/depthnav/pepperlaser.h)) => Defines Pepper robot's Laser Memory Keys.
+     - ***depthimagescanner*** ([*DepthImageScanner.h*](pepper_navigation/depthnav/DepthImageScanner.h), [*DepthImageScanner.cpp*](https://github.com/suuman/pepper_navigation/blob/main/depthnav/DepthImageScanner.cpp)) => Creates a 2D grid map from the depth image. 
+     - ***depth_traits*** ([*depth_traits.h*](https://github.com/suuman/pepper_navigation/blob/main/depthnav/depth_traits.h)) => Template function to process the depth image obtained from [ros *depthimage_to_laserscan*](https://github.com/ros-perception/depthimage_to_laserscan) library.
+     - ***pepperlaser*** ([*pepperlaser.h*](https://github.com/suuman/pepper_navigation/blob/main/depthnav/pepperlaser.h)) => Defines the Pepper robot's Laser Memory Keys.
     - ***alpose2d*** ([*alpose2d.h*](https://github.com/suuman/pepper_navigation/blob/main/depthnav/alpose2d.h), [*alpose2d.cpp*](https://github.com/suuman/pepper_navigation/blob/main/depthnav/alpose2d.cpp)) => *[libalmath](https://github.com/aldebaran/libalmath )* Pose2D library used to process odometry data from the Pepper robot.
 
 
