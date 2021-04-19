@@ -60,7 +60,7 @@ ________________________________________________________________________________
 
 2. ***peppernav_inside*** => Topological navigation of the Pepper robot. It is capable of running onboard on the Pepper robot.  
 
-3. ***peppernavigation*** => Navigation of the Pepper robot along the single reference image list. It is capable of running onboard on the Pepper robot.  
+3. ***peppernavigation*** => Navigation of the Pepper robot along a single sequence of reference images. It is capable of running onboard on the Pepper robot.  
 
 4. ***peppernavigationoff*** => Offline localisation mode from the image sequence. It does not require a robot (Images read from the folder).  
 
