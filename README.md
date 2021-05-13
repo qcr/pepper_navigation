@@ -14,14 +14,14 @@ Before using the code, you agree to use the code at your own risk. The authors a
 6. [Qt5](https://doc.qt.io/qt-5/index.html) ([Core](https://doc.qt.io/qt-5/qtcore-index.html), [Widgets](https://doc.qt.io/qt-5/qtwidgets-index.html), [Test](https://doc.qt.io/qt-5/qttest-index.html)) (for GUI, available in ppa of Ubuntu),
 7. [Graphviz](https://graphviz.org/) ([GVC](https://graphviz.org/pdf/gvc.3.pdf), [CGRAPH](https://graphviz.org/pdf/cgraph.3.pdf), [CDT](https://graphviz.org/pdf/cdt.3.pdf)) (for visualising topological graph, available in ppa of Ubuntu),
 8. [Pepper Virtual Machine](https://bitbucket.org/pepper_qut/virtual-machine.git) and [VirtualBox](https://www.virtualbox.org) (to compile binaries that can run onboard on the Pepper Robot, has to be downloaded separately),
-9. [qgv](https://github.com/suuman/pepper_navigation/tree/main/qgv) and [pepper_qi](https://github.com/suuman/pepper_navigation/tree/main/pepper_qi) (custom libraries that are shipped with this repository).
+9. [qgv](https://github.com/qcr/pepper_navigation/tree/main/qgv) and [pepper_qi](https://github.com/qcr/pepper_navigation/tree/main/pepper_qi) (custom libraries that are shipped with this repository).
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 ## Build Instructions
 
 ### 1. Get Source codes from the repository. 
-   `$ git clone https://github.com/suuman/pepper_navigation.git`
+   `$ git clone https://github.com/qcr/pepper_navigation.git`
 
 ### 2. Install required dependencies (if required).
 `$ sudo apt install libopencv-dev libopencv-contrib-dev libboost-all-dev`  
@@ -62,12 +62,12 @@ ________________________________________________________________________________
 
 4. ***peppernavigationoff*** => Offline localisation mode from the image sequence. It does not require a robot (Images read from the folder).  
 
-***Note:*** To run the executables ***peppernav_inside*** and ***peppernavigation*** onboard on the Pepper robot, they must be compiled in the [Pepper Virtual Machine](https://bitbucket.org/pepper_qut/virtual-machine.git). For details, please refer to the [Reference Manual](https://github.com/suuman/pepper_navigation/tree/main/docs/Pepper_Navigation_Reference_Manual.pdf) in [*../docs*](https://github.com/suuman/pepper_navigation/tree/main/docs) folder.
+***Note:*** To run the executables ***peppernav_inside*** and ***peppernavigation*** onboard on the Pepper robot, they must be compiled in the [Pepper Virtual Machine](https://bitbucket.org/pepper_qut/virtual-machine.git). For details, please refer to the [Reference Manual](https://github.com/qcr/pepper_navigation/tree/main/docs/Pepper_Navigation_Reference_Manual.pdf) in [*../docs*](https://github.com/qcr/pepper_navigation/tree/main/docs) folder.
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 ## Run Code 
-***Example Scripts:*** [*run_onboard.sh*](https://github.com/suuman/pepper_navigation/blob/main/run_onboard.sh), [*run_remotePC.sh*](https://github.com/suuman/pepper_navigation/blob/main/run_remotePC.sh), and [*run_offline.sh*](https://github.com/suuman/pepper_navigation/blob/main/run_offline.sh).    
+***Example Scripts:*** [*run_onboard.sh*](https://github.com/qcr/pepper_navigation/blob/main/run_onboard.sh), [*run_remotePC.sh*](https://github.com/qcr/pepper_navigation/blob/main/run_remotePC.sh), and [*run_offline.sh*](https://github.com/qcr/pepper_navigation/blob/main/run_offline.sh).    
 
 The navigation executables require two arguments:  
 &nbsp;&nbsp;&nbsp;&nbsp; a. &nbsp; Path of topological map (e.g. `../data/tmap`), and   
@@ -75,14 +75,14 @@ The navigation executables require two arguments:
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (e.g. `../data/offlinetest`) to run offline with image sequence (localisation mode only). 
 
 
-**For details, please refer to [docs/Pepper_Navigation_Reference_Manual.pdf](https://github.com/suuman/pepper_navigation/tree/main/docs/Pepper_Navigation_Reference_Manual.pdf) and README.MD at subfolders of this repository.**
+**For details, please refer to [docs/Pepper_Navigation_Reference_Manual.pdf](https://github.com/qcr/pepper_navigation/tree/main/docs/Pepper_Navigation_Reference_Manual.pdf) and README.MD at subfolders of this repository.**
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ## References
-[1]  Bista SR, Ward B, Corke P. Image-Based Indoor Topological Navigation with Collision Avoidance for Resource-Constrained Mobile Robots. Journal of Intelligent & Robotic Systems. 2021.
+[1]  Bista SR, Ward B, Corke P. Image-Based Indoor Topological Navigation with Collision Avoidance for Resource-Constrained Mobile Robots. Journal of Intelligent & Robotic Systems. 2021. [http://dx.doi.org/10.1007/s10846-021-01390-6](http://dx.doi.org/10.1007/s10846-021-01390-6).
 
 
-[2]  Bista SR, Giordano PR, Chaumette F. Appearance-based indoor navigation by IBVS using line segments. IEEE Robotics and Automation Letters. 2016 Jan 26;1(1):423-30.
+[2]  Bista SR, Giordano PR, Chaumette F. Appearance-based indoor navigation by IBVS using line segments. IEEE Robotics and Automation Letters. 2016 Jan 26;1(1):423-30. [https://doi.org/10.1109/LRA.2016.2521907](https://doi.org/10.1109/LRA.2016.2521907).
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ###

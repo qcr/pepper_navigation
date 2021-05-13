@@ -40,6 +40,6 @@ The reference image folder will contain
 ## Creating Toplogical Map for Naviagtion
 Bista SR, Ward B, Corke P. Image-Based Indoor Topological Navigation with Collision Avoidance for Resource-Constrained Mobile Robots.  
 
-To build a topological map from reference images, please refer to the [Reference Manual](https://github.com/suuman/pepper_navigation/tree/main/docs/Pepper_Navigation_Reference_Manual.pdf) in [*../docs*](https://github.com/suuman/pepper_navigation/tree/main/docs) folder.
+To build a topological map from reference images, please refer to the [Reference Manual](https://github.com/qcr/pepper_navigation/tree/main/docs/Pepper_Navigation_Reference_Manual.pdf) in [*../docs*](https://github.com/qcr/pepper_navigation/tree/main/docs) folder.
 
 `genConfigFile.m` generates *conf.txt* that contains the link between the reference images among the adjacent edges.
