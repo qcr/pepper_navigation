@@ -1,7 +1,7 @@
 # depthnav
 
 ## Free-space navigation using depth image
-Bista SR, Ward B, Corke P. Image-Based Indoor Topological Navigation with Collision Avoidance for Resource-Constrained Mobile Robots.   
+Bista SR, Ward B, Corke P. Image-Based Indoor Topological Navigation with Collision Avoidance for Resource-Constrained Mobile Robots. Journal of Intelligent & Robotic Systems. 2021.   
 
 ## Dependencies
 * [OpenCV](https://opencv.org/),
