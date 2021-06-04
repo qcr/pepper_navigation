@@ -1,6 +1,6 @@
 ## Pepper_navigation
 
-This repository contains the source code accompanying our paper [Image-Based Indoor Topological Navigation with Collision Avoidance for Resource-Constrained Mobile Robots](https://dx.doi.org/10.1007/s10846-021-01390-6) [1].  
+This repository contains the source code accompanying our paper [Image-Based Indoor Topological Navigation with Collision Avoidance for Resource-Constrained Mobile Robots](https://dx.doi.org/10.1007/s10846-021-01390-6).  
 The code is open source. The codes are provided “as-is” without any warranty.  
 Before using the code, you agree to use the code at your own risk. The authors are not responsible or liable for any damages incurred using this code.
 
@@ -78,11 +78,37 @@ The navigation executables require two arguments:
 **For details, please refer to [docs/Pepper_Navigation_Reference_Manual.pdf](https://github.com/qcr/pepper_navigation/tree/main/docs/Pepper_Navigation_Reference_Manual.pdf) and README.MD at subfolders of this repository.**
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-## References
-[1]  Bista SR, Ward B, Corke P. Image-Based Indoor Topological Navigation with Collision Avoidance for Resource-Constrained Mobile Robots. Journal of Intelligent & Robotic Systems. 2021. [http://dx.doi.org/10.1007/s10846-021-01390-6](http://dx.doi.org/10.1007/s10846-021-01390-6).
+## Related publications
+Please cite these publications if you find our system useful in your work.
 
+ 1. Bista SR, Ward B, Corke P. Image-Based Indoor Topological Navigation with Collision Avoidance for Resource-Constrained Mobile Robots. Journal of Intelligent & Robotic Systems. 2021 June 3;102(3):55. [http://dx.doi.org/10.1007/s10846-021-01390-6](http://dx.doi.org/10.1007/s10846-021-01390-6).&nbsp;&nbsp;([PDF](https://rdcu.be/clUmX)).  
+```bibtex
+@ARTICLE{Bista_JINT_2021,  
+  author={Bista, Suman Raj and Ward, Belinda and Corke, Peter},  
+  journal={Journal of Intelligent {\&} Robotic Systems},   
+  title={Image-Based Indoor Topological Navigation with Collision Avoidance for Resource-Constrained Mobile Robots},   
+  year={2021},  
+  volume={102},  
+  number={3},  
+  pages={55},  
+  doi={10.1007/s10846-021-01390-6}
+}
+```
 
-[2]  Bista SR, Giordano PR, Chaumette F. Appearance-based indoor navigation by IBVS using line segments. IEEE Robotics and Automation Letters. 2016 Jan 26;1(1):423-30. [https://doi.org/10.1109/LRA.2016.2521907](https://doi.org/10.1109/LRA.2016.2521907).
+2. Bista SR, Giordano PR, Chaumette F. Appearance-based indoor navigation by IBVS using line segments. IEEE Robotics and Automation Letters. 2016 Jan 26;1(1):423-30. [https://doi.org/10.1109/LRA.2016.2521907](https://doi.org/10.1109/LRA.2016.2521907).&nbsp;&nbsp;([PDF](https://hal.inria.fr/hal-01259750/document)).   
+```bibtex
+@ARTICLE{Bista_RAL_2016,  
+  author={Bista, Suman Raj and Giordano, Paolo Robuffo and Chaumette, François},  
+  journal={IEEE Robotics and Automation Letters},   
+  title={Appearance-Based Indoor Navigation by IBVS Using Line Segments},   
+  year={2016},  
+  volume={1},  
+  number={1},  
+  pages={423-430},  
+  issn={1573-0409},  
+  doi={10.1109/LRA.2016.2521907}
+}
+```
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ###

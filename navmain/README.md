@@ -1,7 +1,7 @@
 # navmain
 
 Top-level interface for the navigation as discussed in  
-Bista SR, Ward B, Corke P. Image-Based Indoor Topological Navigation with Collision Avoidance for Resource-Constrained Mobile Robots. Journal of Intelligent & Robotic Systems. 2021.  
+Bista SR, Ward B, Corke P. Image-Based Indoor Topological Navigation with Collision Avoidance for Resource-Constrained Mobile Robots. Journal of Intelligent & Robotic Systems. 102,55(2021).  
 
 ## Dependencies
 * [OpenCV](https://opencv.org/),
@@ -37,4 +37,4 @@ Bista SR, Ward B, Corke P. Image-Based Indoor Topological Navigation with Collis
 
     **Note: The executables *peppernav_inside* and  *peppernavigation* are capable of running onboard on the Pepper robot provided that they are compiled in the [Pepper Virtual Machine](https://bitbucket.org/pepper_qut/virtual-machine.git) [1]. For details, please refer to the [Reference Manual](https://github.com/qcr/pepper_navigation/tree/main/docs/Pepper_Navigation_Reference_Manual.pdf) in [*../docs*](https://github.com/qcr/pepper_navigation/tree/main/docs) folder.**  
   
-[1] G. Suddrey, A. Jacobson and B. Ward. "Enabling a pepper robot to provide automated and interactive tours of a robotics laboratory." arXiv preprint [arXiv:1804.03288](https://arxiv.org/abs/1804.03288) (2018). [ACRA 2018 Proceedings](https://ssl.linklings.net/conferences/acra/acra2018_proceedings/views/includes/files/pap109s1-file1.pdf). https://bitbucket.org/pepper_qut/virtual-machine.git.
+[1] G. Suddrey, A. Jacobson and B. Ward. "Enabling a pepper robot to provide automated and interactive tours of a robotics laboratory." arXiv preprint [arXiv:1804.03288](https://arxiv.org/abs/1804.03288) (2018). [ACRA 2018 Proceedings](https://ssl.linklings.net/conferences/acra/acra2018_proceedings/views/includes/files/pap109s1-file1.pdf). [https://bitbucket.org/pepper_qut/virtual-machine.git](https://bitbucket.org/pepper_qut/virtual-machine.git).
